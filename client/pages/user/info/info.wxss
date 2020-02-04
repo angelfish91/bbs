@@ -1,0 +1,29 @@
+/* pages/user/info/info.wxss */
+.info {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.info:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+}
+.info:first-child:before {
+  display: none;
+}
+
+.info-key {
+  flex: 1;
+}
+.info-val {
+  color:  #D8D8D8;
+  padding-right: 26rpx;
+  position: relative;
+}

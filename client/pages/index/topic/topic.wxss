@@ -1,0 +1,75 @@
+/* pages/topic/topic.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color:rgb(207, 241, 252);  
+}
+
+.topic {
+  border-radius:25rpx;
+  margin: 10rpx;
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  height: 120rpx;
+  background-color: white;
+}
+.topic:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #D8D8D8;
+  color: #D8D8D8;
+}
+.topic:first-child:before {
+  display: none;
+}
+
+.topic-author {
+  position: relative;
+  width: 200rpx;
+  /* background-color: lightgray; */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  
+}
+
+.topic-author-name {
+  position: relative;
+  height: 20rpx;
+  width: 200rpx;
+  /* background-color: red; */
+  text-align: center;
+  color:  black;
+  font-size: 25rpx;
+}
+
+.topic-title {
+  position: relative;
+  padding-right: 50rpx;
+  padding-left: 0rpx;
+}
+.topic-content {
+  color:  #D8D8D8;
+  position: relative;
+  padding-right: 50rpx;
+  padding-left: 0rpx;
+}
+
+.post {
+  float: right;
+  background-color: rgb(26, 190, 26);
+  position: fixed;
+  height: 120rpx;
+  width: 120rpx;
+  bottom: 80rpx;
+  right: 80rpx;  
+  border: 0 solid #ffffff;
+  border-radius: 100rpx;
+  box-shadow: 4rpx 1rpx 1rpx #cccccc;
+}

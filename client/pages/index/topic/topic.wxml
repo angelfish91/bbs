@@ -1,0 +1,31 @@
+<!--pages/topic/topic.wxml-->
+<!--pages/user/info/info.wxml-->
+<view class="container">
+  <!-- <block wx:for-items="{{list}}" wx:key="id">
+    <view class="topic">
+      <view class="topic-author">
+        <view class="topic-author-name">{{item.topic_author_name}}</view>
+      </view>
+      <view class="topic-text">
+        <view class="topic-title">{{item.topic_title}}</view>
+        <view class="topic-content">{{item.topic_content}}}</view>
+      </view>
+    </view>
+  </block> -->
+  <block wx:for-items="{{topicInfo}}" wx:key="id">
+    <view class="topic">
+      <view class="topic-author">
+        <image class="topic-author-avatar" src="{{item.user.avatar}}" mode="cover"></image>
+        <view class="topic-author-name">{{item.user.nickname}}</view>
+      </view>
+      <view class="topic-text">
+        <view class="topic-title">{{item.title}}</view>
+        <view class="topic-content">{{item.summary}}</view>
+      </view>
+    </view>
+  </block>
+  <image class="post" src="/image/ic_add.png" bindtap="onPostClick"></image>
+  <!-- <icon type="success" size="50" class="post" bindtap="onPostClick"/> -->
+</view>
+
+

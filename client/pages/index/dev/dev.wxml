@@ -1,0 +1,25 @@
+<!--pages/dev/dev.wxml-->
+<view class="welcome"> 
+<!-- <text>Welcome\n</text> -->
+<text>本小程序还处于开发试运行阶段，欢迎大家提出宝贵意见!</text>
+</view>
+
+<view class="table">
+ <view class="tr bg-w">
+  <view class="th">name</view>
+  <view class="th">qq</view>
+  <view class="th ">wechat</view>
+ </view>
+ <block wx:for="{{listData}}" wx:key="name">
+  <view class="tr" wx:if="{{index % 2 == 0}}">
+   <view class="td">{{item.name}}</view>
+   <view class="td">{{item.uid}}</view>
+   <view class="td">{{item.wid}}</view>
+  </view>
+  <view class="tr" wx:else>
+   <view class="td">{{item.name}}</view>
+   <view class="td">{{item.uid}}</view>
+   <view class="td">{{item.wid}}</view>
+  </view>
+ </block>
+</view>

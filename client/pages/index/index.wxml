@@ -1,0 +1,24 @@
+<!--pages/index/index.wxml-->
+<image class="image" src="/image/bg.png"/>
+
+<view class="container">
+  <view class="page-section">
+    <view class="page-section-time">
+      <text>{{time}}\n{{time2}}</text>
+    </view>
+    <view class="page-section-button">
+      <view id="car" bindtap="loadtopic" class="page-section-icon1">
+        <image class="icon" src="/image/ic_car.png"/>
+        <view class="icon-text">拼车</view>
+      </view>
+      <view id="buy" bindtap="loadtopic" class="page-section-icon2">
+        <image class="icon" src="/image/ic_fun.png"/>
+        <view class="icon-text">二手</view>
+      </view>
+      <view bindtap="loaddev" class="page-section-icon3">
+        <image class="icon" src="/image/ic_dev.png"/>
+        <view class="icon-text">开发者</view>
+      </view>
+    </view>
+  </view>
+</view>

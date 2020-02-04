@@ -1,0 +1,6 @@
+/* pages/index/post/post.wxss */
+@import "/common/lib/weui.wxss";
+
+.page-section{
+  margin-bottom: 20rpx;
+}

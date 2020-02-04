@@ -1,0 +1,31 @@
+<!--pages/user/info/info.wxml-->
+<view class="container">
+  <view class="info">
+    <view class="info-key">头像</view>
+    <view class="info-val">xx</view>
+  </view>
+  <view class="info">
+    <view class="info-key">昵称</view>
+    <view class="info-val">{{userInfo.nickName}}</view>
+  </view>
+  <view class="info">
+    <view class="info-key">性别</view>
+    <view class="info-val">{{userInfo.gender}}</view>
+  </view>
+  <view class="info">
+    <view class="info-key">城市</view>
+    <view class="info-val">{{userInfo.city}}</view>
+  </view>
+  <view class="info">
+    <view class="info-key">省份</view>
+    <view class="info-val">{{userInfo.province}}</view>
+  </view>
+    <view class="info">
+    <view class="info-key">国家</view>
+    <view class="info-val">{{userInfo.country}}</view>
+  </view>
+  <view class="info" hidden="{{!debug}}">
+    <view class="info-key">token</view>
+    <view class="info-val">{{userToken}}</view>
+  </view>
+</view>

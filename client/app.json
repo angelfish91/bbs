@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/logs/logs",
+    "pages/index/dev/dev",
+    "pages/index/topic/topic",
+    "pages/index/post/post",
+    "pages/user/user",
+    "pages/user/info/info"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "bbs",
+        "iconPath": "image/ic_home.png",
+        "selectedIconPath": "image/ic_home.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "userInfo",
+        "iconPath": "image/ic_leader.png",
+        "selectedIconPath": "image/ic_leader.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
