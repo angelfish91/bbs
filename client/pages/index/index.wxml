@@ -4,7 +4,7 @@
 <view class="container">
   <view class="page-section">
     <view class="page-section-time">
-      <text>{{time}}\n{{time2}}</text>
+      <text>{{time.dateStr}}\n{{time.weekStr}}</text>
     </view>
     <view class="page-section-button">
       <view id="car" bindtap="loadtopic" class="page-section-icon1">

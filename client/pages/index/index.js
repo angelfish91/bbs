@@ -9,48 +9,13 @@ Page({
 
   },
 
-
-  loadtopic:function(events){
-    wx.navigateTo({
-      url: "./topic/topic",
-      success: function(res) {
-        var tagID = 0
-        if(events.currentTarget.id == "car"){
-          tagID = 2
-        } else if (events.currentTarget.id == "buy") {
-          tagID = 1
-        }
-        res.eventChannel.emit('eventFromIndexToTopic', 
-        { 
-          tagID: tagID
-        })
-      },
-      fail: function(res) {
-        console.log("click icon topic fail")
-      }
-    })
-  },
-
-  loaddev:function(){
-    wx.navigateTo({
-      url: "./dev/dev",
-      success: function(res) {
-      },
-      fail: function(res) {
-        console.log("click icon dev fail")
-      }
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var time = util.formatTime(new Date());
-    var time2 = util.formatTime2(new Date());
     this.setData({
       time: time,
-      time2: time2,
     });
   },
 
@@ -101,5 +66,37 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  loadtopic:function(events){
+    wx.navigateTo({
+      url: "./topic/topic",
+      success: function(res) {
+        var tagID = 0
+        if(events.currentTarget.id == "car"){
+          tagID = 2
+        } else if (events.currentTarget.id == "buy") {
+          tagID = 1
+        }
+        res.eventChannel.emit('eventFromIndexToTopic', 
+        { 
+          tagID: tagID
+        })
+      },
+      fail: function(res) {
+        console.log("click icon topic fail")
+      }
+    })
+  },
+
+  loaddev:function(){
+    wx.navigateTo({
+      url: "./dev/dev",
+      success: function(res) {
+      },
+      fail: function(res) {
+        console.log("click icon dev fail")
+      }
+    })
+  },
 })

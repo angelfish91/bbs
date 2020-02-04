@@ -21,6 +21,7 @@ Page({
     eventChannel.on('eventFromIndexToTopic', function(sendData) {
       that.setData({tagID: sendData.tagID})
     })
+    // 请求页面帖子数据
     backend.requestTopicTagByPage({
       tagID: this.data.tagID, 
       pageID: 1,
