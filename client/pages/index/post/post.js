@@ -5,14 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tagID : 1,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    const eventChannel = this.getOpenerEventChannel()
+    // 1. 子页面传送数据去父页面
+    // eventChannel.emit('acceptDataFromOpenedPage', {data: 'test'});
+    // 2. 父页面传送数据来子页面
+    eventChannel.on('eventFromTopicToPost', function(sendData) {
+      that.setData({tagID: sendData.tagID})
+    })
   },
 
   /**

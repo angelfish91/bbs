@@ -11,43 +11,33 @@ Page({
 
 
   loadtopic:function(events){
-    console.log("click icon", events);
     wx.navigateTo({
       url: "./topic/topic",
-      events: {
-        // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-        // acceptDataFromOpenedPage: function(data) {
-        //   console.log(data)
-        // },
-      },
       success: function(res) {
-        console.log("click icon success")
         var tagID = 0
         if(events.currentTarget.id == "car"){
           tagID = 2
         } else if (events.currentTarget.id == "buy") {
           tagID = 1
         }
-        res.eventChannel.emit('acceptDataFromOpenerPage', 
+        res.eventChannel.emit('eventFromIndexToTopic', 
         { 
           tagID: tagID
         })
       },
       fail: function(res) {
-        console.log("click icon fail")
+        console.log("click icon topic fail")
       }
     })
   },
 
   loaddev:function(){
-    console.log("click icon");
     wx.navigateTo({
       url: "./dev/dev",
       success: function(res) {
-        console.log("click icon success")
       },
       fail: function(res) {
-        console.log("click icon fail")
+        console.log("click icon dev fail")
       }
     })
   },

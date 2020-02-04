@@ -9,22 +9,6 @@ Page({
    */
   data: {
     tagID: 1,
-    // topicInfo: [],
-    // list:[],
-    list:[
-      {
-        topic_author_avatar: null,
-        topic_author_name: "sparrow",
-        topic_title: "this is a title",
-        topic_content: "this is the content, this is the content",
-      },
-      {
-        topic_author_avatar: null,
-        topic_author_name: "sophie",
-        topic_title: "this is a title",
-        topic_content: "this is the content, this is the content",
-      },
-    ]
   },
 
   /**
@@ -33,11 +17,7 @@ Page({
   onLoad: function (options) {
     var that = this
     const eventChannel = this.getOpenerEventChannel()
-    // 1. 子页面传送数据去父页面
-    // eventChannel.emit('acceptDataFromOpenedPage', {data: 'test'});
-    // 2. 父页面传送数据来子页面
-    eventChannel.on('acceptDataFromOpenerPage', function(sendData) {
-      console.log("sendData", sendData)
+    eventChannel.on('eventFromIndexToTopic', function(sendData) {
       that.setData({tagID: sendData.tagID})
     })
     this.requestTopicTagByPage(this.data.tagID, 1)
@@ -109,7 +89,6 @@ Page({
             topicInfo: res.data.data.results
           })
           console.log("requestTopicTagByPage success", this.data.topicInfo)
-          console.log("requestTopicTagByPage", this.data.topicInfo.length)
         } else {
           console.log("requestTopicTagByPage success but statusCode == ", res.statusCode)
         }
@@ -121,14 +100,17 @@ Page({
   },
 
   onPostClick:function(){
-    console.log("click icon");
+    var that = this
     wx.navigateTo({
       url: "../post/post",
       success: function(res) {
-        console.log("click icon success")
+        res.eventChannel.emit('eventFromTopicToPost', 
+        { 
+          tagID: that.data.tagID
+        })
       },
       fail: function(res) {
-        console.log("click icon fail")
+        console.log("click icon post fail")
       }
     })
   },

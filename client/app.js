@@ -3,6 +3,12 @@ var util = require("./utils/util.js")
 var backend = require("./utils/backend.js")
 
 App({
+  globalData: {
+    debug : true,
+    userCode: null,
+    userInfo: null,
+    userToken: null, // 后台token
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -51,10 +57,6 @@ App({
     })
   },
 
-  testFunc: function(){
-    console.log("testFunc")
-  },
-
   userSignin: function(){
     wx.request({
       url: backend.config.bbsUrl + "login/signin",
@@ -69,21 +71,13 @@ App({
       },
       success: res => {
         if(res.data.data.token){
-          // console.log("userSigninTest success", res.data.data.token)
           this.globalData.userToken = res.data.data.token
           console.log("app.js userToken\t", this.globalData.userToken)
         }
       },
       fail: res=> {
-        console.log("userSigninTest fail", res)
+        console.log("userSignin fail", res)
       }
     })
   },
-
-  globalData: {
-    debug : true,
-    userCode: null,
-    userInfo: null,
-    userToken: null, // 后台token
-  }
 })
