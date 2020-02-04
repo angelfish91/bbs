@@ -3,6 +3,16 @@ var config = {
   // bbsUrl: "http://sparrow.com/api/"
 }
 
+var topicID2str = {
+  1: "二手",
+  2: "拼车",
+}
+
+var str2TopicID = {
+  "二手": 1,
+  "拼车": 2,
+}
+
 function userCreate(userInfo){
   wx.request({
     url: config.bbsUrl + "user/create"
@@ -60,8 +70,37 @@ function requestTopicTagByPage ({tagID, pageID, requestTopicTagByPageCallBack}) 
   })
 }
 
+function postTopic ({tagID, userToken, title, content, postTopicCallBack}) {
+  wx.request({
+    url: config.bbsUrl + "topic/create",
+    method: "POST",
+    header: {
+      'content-type': 'application/x-www-form-urlencoded' // 默认值
+    },
+    data: {
+      "userToken": userToken,
+      "tags": topicID2str[tagID],
+      "title": title,
+      "content": content,
+    },
+    success: res => {
+      if(res.statusCode == 200){
+        if(postTopicCallBack){
+          postTopicCallBack(res)
+        }
+      } else {
+        console.log("postTopicCallBack success but statusCode == ", res.statusCode)
+      }
+    },
+    fail: res=> {
+      console.log("postTopicCallBack fail", res)
+    }
+  })
+}
+
 module.exports = {
   config: config,
   userSignIn: userSignIn,
   requestTopicTagByPage: requestTopicTagByPage,
+  postTopic: postTopic,
 }

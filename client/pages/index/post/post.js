@@ -1,4 +1,9 @@
 // pages/index/post/post.js
+var util = require("../../../utils/util.js")
+var backend = require("../../../utils/backend.js")
+
+const app = getApp()
+
 Page({
 
   /**
@@ -6,6 +11,8 @@ Page({
    */
   data: {
     tagID : 1,
+    title : "",
+    content: "",
   },
 
   /**
@@ -69,5 +76,43 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  bindTitleInput: function (e) {
+    this.setData({
+      title: e.detail.value
+    })
+  },
+
+  bindContentInput: function (e) {
+    this.setData({
+      content: e.detail.value
+    })
+  },
+
+  confirmPost: function() {
+    var userToken = app.globalData.userToken
+    if(!userToken){
+      util.showFail("请先登陆")
+      return
+    }
+    if(this.data.title.length==0){
+      util.showFail("请输入标题")
+      return
+    }
+    if(this.data.content.length==0){
+      util.showFail("请输入正文")
+      return
+    }
+    backend.postTopic({
+      userToken: userToken,
+      tagID: this.data.tagID,
+      title: this.data.title,
+      content: this.data.content,
+      postTopicCallBack: function(res){
+        console.log("postTopic success", res)
+        wx.navigateBack()
+      }
+    })
   }
 })

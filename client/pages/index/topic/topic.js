@@ -21,17 +21,7 @@ Page({
     eventChannel.on('eventFromIndexToTopic', function(sendData) {
       that.setData({tagID: sendData.tagID})
     })
-    // 请求页面帖子数据
-    backend.requestTopicTagByPage({
-      tagID: this.data.tagID, 
-      pageID: 1,
-      requestTopicTagByPageCallBack: function(res){
-        that.setData({
-          topicInfo: res
-        })
-        console.log("requestTopicTagByPage success", that.data.topicInfo)
-      }
-    })
+    this.refreshTopic()
   },
 
   /**
@@ -81,6 +71,21 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 刷新页面帖子数据
+  refreshTopic: function() {
+    var that = this
+    backend.requestTopicTagByPage({
+      tagID: this.data.tagID, 
+      pageID: 1,
+      requestTopicTagByPageCallBack: function(res){
+        that.setData({
+          topicInfo: res
+        })
+        console.log("requestTopicTagByPage success", that.data.topicInfo)
+      }
+    })
   },
 
   onPostClick:function(){
