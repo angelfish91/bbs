@@ -9,6 +9,7 @@ Page({
    */
   data: {
     tagID: 1,
+    topicInfo: null,
   },
 
   /**
@@ -20,7 +21,16 @@ Page({
     eventChannel.on('eventFromIndexToTopic', function(sendData) {
       that.setData({tagID: sendData.tagID})
     })
-    this.requestTopicTagByPage(this.data.tagID, 1)
+    backend.requestTopicTagByPage({
+      tagID: this.data.tagID, 
+      pageID: 1,
+      requestTopicTagByPageCallBack: function(res){
+        that.setData({
+          topicInfo: res
+        })
+        console.log("requestTopicTagByPage success", that.data.topicInfo)
+      }
+    })
   },
 
   /**
@@ -70,33 +80,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  requestTopicTagByPage: function (tagID, pageID) {
-    wx.request({
-      url: backend.config.bbsUrl + "admin/topic/lists",
-      method: "GET",
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      data: {
-        "tagid": tagID,
-        "page": pageID,
-      },
-      success: res => {
-        if(res.statusCode == 200){
-          this.setData({
-            topicInfo: res.data.data.results
-          })
-          console.log("requestTopicTagByPage success", this.data.topicInfo)
-        } else {
-          console.log("requestTopicTagByPage success but statusCode == ", res.statusCode)
-        }
-      },
-      fail: res=> {
-        console.log("requestTopicTagByPage fail", res)
-      }
-    })
   },
 
   onPostClick:function(){
