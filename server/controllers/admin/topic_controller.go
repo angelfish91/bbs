@@ -48,6 +48,7 @@ func (this *TopicController) AnyList() *simple.JsonResult {
 
 }
 
+// 获得指定tagid下的topic
 func (this *TopicController) AnyLists() *simple.JsonResult {
 	tagID := simple.FormValue(this.Ctx, "tagid")
 	page := simple.FormValue(this.Ctx, "page")

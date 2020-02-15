@@ -209,7 +209,7 @@ func (this *topicService) GetTopicInIds(topicIds []int64) []model.Topic {
 		return nil
 	}
 	var topics []model.Topic
-	simple.GetDB().Where("id in (?)", topicIds).Find(&topics)
+	simple.GetDB().Where("id in (?)", topicIds).Order("id DESC").Find(&topics)
 	return topics
 }
 
