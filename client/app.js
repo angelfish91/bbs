@@ -21,7 +21,7 @@ App({
       success: res => {
         this.globalData.userCode = res.code
         if(this.globalData.debug){
-          console.log("app.js userCode\t", this.globalData.userCode)
+          console.log("[DEBUG] app.js userCode\t", this.globalData.userCode)
         }
         that.getSetting()
       },
@@ -40,6 +40,8 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           that.getUserInfo()
         } else {
+          // that.getUserPermission()
+          that.getUserInfo()
           util.showFail("用户信息未授权")
         }
       }
@@ -53,9 +55,12 @@ App({
       lang:"zh_CN",
       success: res => {
         // 可以将 res 发送给后台解码出 unionId
+        if(that.globalData.debug){
+          console.log("[DEBUG] app.js userinfo credentials\t", res)
+        }
         this.globalData.userInfo = res.userInfo
         if(this.globalData.debug){
-          console.log("app.js userInfo\t", this.globalData.userInfo)
+          console.log("[DEBUG] app.js userInfo detail\t", this.globalData.userInfo)
         }
         
         // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -67,10 +72,27 @@ App({
         backend.userSignIn({
           userSignInCallBack: userToken => {
             that.globalData.userToken = userToken
-            console.log("app.js userToken\t", this.globalData.userToken)
+            console.log("[DEBUG] app.js userToken\t", this.globalData.userToken)
           }
         })
+      },
+      fail: res=> {
+        util.showFail("用户信息获取失败")
+        console.log("[ERROR] app.js get userInfo fail")
       }
     })
   },
+  getUserPermission: function(){
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  }
 })

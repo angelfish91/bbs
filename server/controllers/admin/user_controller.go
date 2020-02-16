@@ -11,6 +11,7 @@ import (
 	"github.com/mlogclub/simple"
 
 	"github.com/mlogclub/bbs-go/services"
+	"github.com/mlogclub/bbs-go/wxcode"
 )
 
 type UserController struct {
@@ -23,6 +24,12 @@ func (this *UserController) GetBy(id int64) *simple.JsonResult {
 		return simple.JsonErrorMsg("Not found, id=" + strconv.FormatInt(id, 10))
 	}
 	return simple.JsonData(this.buildUserItem(t))
+}
+
+func (this *UserController) GetIdentity() *simple.JsonResult {
+	jsCode := simple.FormValue(this.Ctx, "jscode")
+	ans := wxcode.GetWxUserIdentity(jsCode)
+	return simple.JsonData(ans)
 }
 
 func (this *UserController) AnyList() *simple.JsonResult {
