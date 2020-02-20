@@ -47,7 +47,6 @@ const showFail = str => {
   })
 }
 
-
 module.exports = {
   formatTime: formatTime,
   showFail: showFail,

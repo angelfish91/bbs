@@ -1,7 +1,7 @@
 <!--pages/topic/topic.wxml-->
 <view class="container">
   <block wx:for-items="{{topicInfo}}" wx:key="id">
-    <view class="topic">
+    <view class="topic" bindtap="onTopicClick" data-index="{{item.id}}">
       <view class="topic-author">
         <image class="topic-author-avatar" src="{{item.user.avatar}}" mode="cover"></image>
         <view class="topic-author-name">{{item.user.nickname}}</view>

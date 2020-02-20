@@ -49,6 +49,12 @@ page {
   font-size: 25rpx;
 }
 
+.topic-author-avatar {
+  position: relative;
+  height: 120rpx;
+  width: 120rpx;
+}
+
 .topic-title {
   position: relative;
   padding-right: 50rpx;

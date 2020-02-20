@@ -1,13 +1,12 @@
 package common
 
 import (
-	"regexp"
 	"strings"
 
 	"github.com/mlogclub/simple"
 
-	"github.com/mlogclub/bbs-go/model"
 	"github.com/mlogclub/bbs-go/common/config"
+	"github.com/mlogclub/bbs-go/model"
 )
 
 // 是否是正式环境
@@ -77,13 +76,13 @@ func GetUserRoles(roles string) []string {
 
 // 验证用户名合法性，用户名必须由5-12位(数字、字母、_、-)组成，且必须以字母开头。
 func IsValidateUsername(username string) bool {
-	matched, err := regexp.MatchString("^[0-9a-zA-Z_-]{5,12}$", username)
-	if err != nil || !matched {
-		return false
-	}
-	matched, err = regexp.MatchString("^[a-zA-Z]", username)
-	if err != nil || !matched {
-		return false
-	}
+	// matched, err := regexp.MatchString("^[0-9a-zA-Z_-]{5,12}$", username)
+	// if err != nil || !matched {
+	// 	return false
+	// }
+	// matched, err = regexp.MatchString("^[a-zA-Z]", username)
+	// if err != nil || !matched {
+	// 	return false
+	// }
 	return true
 }

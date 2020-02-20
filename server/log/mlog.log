@@ -79,3 +79,66 @@ time="2020-02-05T00:22:46+08:00" level=info msg="百度链接提交完成：{\"r
 time="2020-02-05T00:33:31+08:00" level=info msg="got signal [interrupt], exiting now"
 time="2020-02-05T00:33:31+08:00" level=info msg=Exited
 time="2020-02-05T00:33:31+08:00" level=error msg="http: Server closed"
+time="2020-02-09T11:48:45+08:00" level=info msg="百度链接提交完成：{\"remain\":98883,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/18\"]}"
+time="2020-02-09T15:50:30+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-09T15:50:30+08:00" level=error msg="http: Server closed"
+time="2020-02-09T15:50:30+08:00" level=info msg=Exited
+time="2020-02-15T16:08:40+08:00" level=info msg="百度链接提交完成：{\"remain\":98353,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/19\"]}"
+time="2020-02-15T16:39:55+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-15T16:39:55+08:00" level=error msg="http: Server closed"
+time="2020-02-15T16:39:55+08:00" level=info msg=Exited
+time="2020-02-15T16:43:47+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/20\"]}"
+time="2020-02-15T16:43:57+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/21\"]}"
+time="2020-02-15T16:44:03+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/22\"]}"
+time="2020-02-15T16:44:08+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/23\"]}"
+time="2020-02-15T16:44:14+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/24\"]}"
+time="2020-02-15T16:44:18+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/25\"]}"
+time="2020-02-15T16:44:23+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/26\"]}"
+time="2020-02-15T16:44:30+08:00" level=info msg="百度链接提交完成：{\"remain\":98298,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/27\"]}"
+time="2020-02-15T16:44:36+08:00" level=info msg="百度链接提交完成：{\"remain\":98297,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/28\"]}"
+time="2020-02-15T16:44:42+08:00" level=info msg="百度链接提交完成：{\"remain\":98294,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/29\"]}"
+time="2020-02-15T16:44:48+08:00" level=info msg="百度链接提交完成：{\"remain\":98294,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/30\"]}"
+time="2020-02-15T16:44:53+08:00" level=info msg="百度链接提交完成：{\"remain\":98294,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/31\"]}"
+time="2020-02-15T16:45:01+08:00" level=info msg="百度链接提交完成：{\"remain\":98294,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/32\"]}"
+time="2020-02-15T16:45:35+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-15T16:45:35+08:00" level=error msg="http: Server closed"
+time="2020-02-15T16:45:35+08:00" level=info msg=Exited
+time="2020-02-15T17:03:50+08:00" level=info msg="百度链接提交完成：{\"remain\":98263,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/33\"]}"
+time="2020-02-15T17:14:31+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-15T17:14:31+08:00" level=error msg="http: Server closed"
+time="2020-02-15T17:47:48+08:00" level=info msg="百度链接提交完成：{\"remain\":98189,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/34\"]}"
+time="2020-02-16T22:19:49+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:19:49+08:00" level=error msg="http: Server closed"
+time="2020-02-16T22:19:49+08:00" level=info msg=Exited
+time="2020-02-16T22:19:56+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:19:56+08:00" level=info msg=Exited
+time="2020-02-16T22:22:58+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:22:58+08:00" level=error msg="http: Server closed"
+time="2020-02-16T22:22:58+08:00" level=info msg=Exited
+time="2020-02-16T22:24:32+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:24:32+08:00" level=info msg=Exited
+time="2020-02-16T22:24:32+08:00" level=error msg="http: Server closed"
+time="2020-02-16T22:29:39+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:29:39+08:00" level=error msg="http: Server closed"
+time="2020-02-16T22:29:39+08:00" level=info msg=Exited
+time="2020-02-16T22:30:01+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-16T22:30:01+08:00" level=error msg="http: Server closed"
+time="2020-02-17T10:04:26+08:00" level=error msg="http: Server closed"
+time="2020-02-18T20:49:06+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-18T20:49:06+08:00" level=error msg="http: Server closed"
+time="2020-02-18T20:49:06+08:00" level=error msg="Disconnect from database failed: bad connection"
+time="2020-02-18T20:49:06+08:00" level=info msg=Exited
+time="2020-02-20T21:19:08+08:00" level=error msg="opens database failed: dial tcp 127.0.0.1:3306: connect: connection refused"
+time="2020-02-20T21:19:08+08:00" level=error msg="auto migrate tables failed: sql: database is closed"
+time="2020-02-20T21:26:32+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-20T21:26:32+08:00" level=info msg=Exited
+time="2020-02-20T22:31:54+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-20T22:31:54+08:00" level=error msg="http: Server closed"
+time="2020-02-20T22:31:54+08:00" level=info msg=Exited
+time="2020-02-20T22:35:14+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-20T22:35:14+08:00" level=error msg="http: Server closed"
+time="2020-02-20T22:38:23+08:00" level=info msg="百度链接提交完成：{\"remain\":96867,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/35\"]}"
+time="2020-02-20T22:50:49+08:00" level=info msg="百度链接提交完成：{\"remain\":96840,\"success\":0,\"not_same_site\":[\"https://sparrow.club/topic/36\"]}"
+time="2020-02-20T23:29:43+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-20T23:29:43+08:00" level=error msg="http: Server closed"
+time="2020-02-20T23:29:43+08:00" level=info msg=Exited

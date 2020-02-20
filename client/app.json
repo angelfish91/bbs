@@ -6,7 +6,8 @@
     "pages/index/topic/topic",
     "pages/index/post/post",
     "pages/user/user",
-    "pages/user/info/info"
+    "pages/user/info/info",
+    "pages/index/content/content"
   ],
   "tabBar": {
     "list": [

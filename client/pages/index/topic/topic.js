@@ -131,4 +131,19 @@ Page({
       }
     })
   },
+  onTopicClick:function(e){
+    var that = this
+    wx.navigateTo({
+      url: "../content/content",
+      success: function(res) {
+        res.eventChannel.emit('eventFromTopicToContent', 
+        { 
+          topicID: e.currentTarget.dataset.index
+        })
+      },
+      fail: function(res) {
+        console.log("click icon post fail")
+      }
+    })
+  },
 })

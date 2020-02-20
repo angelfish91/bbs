@@ -23,6 +23,20 @@ App({
         if(this.globalData.debug){
           console.log("[DEBUG] app.js userCode\t", this.globalData.userCode)
         }
+        backend.userIdentity({
+          jscode: this.globalData.userCode,
+          userIdentityCallback: data => {
+            if(data.data){
+              if(data.data.data){
+                var tmp =  JSON.parse(data.data.data)
+                that.globalData.openid = tmp.openid
+                that.globalData.session_key = tmp.session_key
+                console.log("[DEBUG] app.js userOpenID", that.globalData.openid)
+              }
+            }
+            
+          }
+        })
         that.getSetting()
       },
       fail: res => {
@@ -41,7 +55,6 @@ App({
           that.getUserInfo()
         } else {
           // that.getUserPermission()
-          that.getUserInfo()
           util.showFail("用户信息未授权")
         }
       }
@@ -69,8 +82,11 @@ App({
           this.userInfoReadyCallback(res)
         }
         // bbs进行登陆
-        backend.userSignIn({
-          userSignInCallBack: userToken => {
+        backend.AutoSignIn({
+          openid : that.globalData.openid,
+          nickname: that.globalData.userInfo.nickName,
+          avatar: that.globalData.userInfo.avatarUrl,
+          succCallBack: userToken => {
             that.globalData.userToken = userToken
             console.log("[DEBUG] app.js userToken\t", this.globalData.userToken)
           }
