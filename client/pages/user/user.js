@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
-const app = getApp()
+var app = getApp()
+var login = require("../../utils/login.js")
 
 Page({
   data: {

@@ -1,6 +1,7 @@
 // pages/user/info/info.js
 const app = getApp()
 var util = require('../../../utils/util.js');
+var login = require('../../../utils/login.js');
 
 Page({
 
@@ -41,7 +42,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    login.loginBBS()
   },
 
   /**

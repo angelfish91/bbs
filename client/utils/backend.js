@@ -1,18 +1,18 @@
 var config = {
-  bbsUrl: "http://127.0.0.1:8082/api/",
-  // bbsUrl: "http://sparrow.com/api/"
+  // bbsUrl: "http://127.0.0.1:8082/api/",
+  bbsUrl: "http://sparrowsong.xyz:8082/api/",
   defaultEmail: "xxx@xxx.com",
   defaultPassword: "123456",
 }
 
 var topicID2str = {
-  1: "二手",
-  2: "拼车",
+  1: "拼车",
+  2: "二手",
 }
 
 var str2TopicID = {
-  "二手": 1,
-  "拼车": 2,
+  "拼车": 1,
+  "二手": 2,
 }
 
 function makeRandomID(length) {

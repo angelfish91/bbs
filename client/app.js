@@ -32,6 +32,7 @@ App({
                 that.globalData.openid = tmp.openid
                 that.globalData.session_key = tmp.session_key
                 console.log("[DEBUG] app.js userOpenID", that.globalData.openid)
+                console.log("[DEBUG] app.js session_key", that.globalData.session_key)
               }
             }
             

@@ -142,3 +142,9 @@ time="2020-02-20T22:50:49+08:00" level=info msg="百度链接提交完成：{\"r
 time="2020-02-20T23:29:43+08:00" level=info msg="got signal [interrupt], exiting now"
 time="2020-02-20T23:29:43+08:00" level=error msg="http: Server closed"
 time="2020-02-20T23:29:43+08:00" level=info msg=Exited
+time="2020-02-21T10:12:52+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-02-21T10:12:52+08:00" level=error msg="http: Server closed"
+time="2020-06-16T15:55:05+08:00" level=error msg="opens database failed: dial tcp [::1]:3306: connect: connection refused"
+time="2020-06-16T15:55:05+08:00" level=error msg="auto migrate tables failed: sql: database is closed"
+time="2020-06-16T15:55:14+08:00" level=info msg="got signal [interrupt], exiting now"
+time="2020-06-16T15:55:14+08:00" level=info msg=Exited

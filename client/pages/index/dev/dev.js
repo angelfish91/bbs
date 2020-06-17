@@ -6,8 +6,8 @@ Page({
    */
   data: {
     listData: [
-     { "name": "sophie", "uid": "693905296", "wid": "amgelfish" },
-     { "name": "sparrow", "uid": "1445716925", "wid": "nuaa010920211" },
+     { "name": "sparrow", "uid": "693905296", "wid": "amgelfish" },
+     { "name": "sophie", "uid": "1445716925", "wid": "nuaa010920211" },
     ]
    },
 

@@ -278,7 +278,7 @@ func BuildProject(project *model.Project) *model.ProjectResponse {
 	return rsp
 }
 
-func BuildSimpleProjects(projects []model.Project) [] model.ProjectSimpleResponse {
+func BuildSimpleProjects(projects []model.Project) []model.ProjectSimpleResponse {
 	if projects == nil || len(projects) == 0 {
 		return nil
 	}
